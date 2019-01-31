@@ -1,14 +1,18 @@
 // Libs
 import React, { Component } from "react";
 
+// Utils
+import AppProvider from "./static/AppProvider";
+
 // Components
 import Counter from "./components/Counter/Counter.js";
+import CounterContext from "./components/CounterContext/CounterContext.js";
 
 // Component
 class App extends Component {
   render() {
     return (
-      <>
+      <AppProvider>
         <article>
           <h1>useState hook</h1>
           <section>
@@ -22,7 +26,14 @@ class App extends Component {
             <Counter updateTitleAfterAddition={true} />
           </section>
         </article>
-      </>
+
+        <article>
+          <h1>useState hook (context)</h1>
+          <section>
+            <CounterContext />
+          </section>
+        </article>
+      </AppProvider>
     );
   }
 }
