@@ -1,0 +1,29 @@
+.counter {
+  display: flex;
+  justify-content: stretch;
+
+  &__count {
+    min-width: 2em;
+    padding: 1em;
+    background: salmon;
+  }
+
+  &__btn {
+    flex: 1;
+    font-size: 1em;
+    border: none;
+    background-color: darken(salmon, 2%);
+    transition: background-color 100ms ease-out;
+
+    &:hover {
+      background-color: darken(salmon, 5%);
+    }
+  }
+
+  &__count,
+  &__btn {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+}
