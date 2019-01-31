@@ -6,7 +6,7 @@ import AppProvider from "./static/AppProvider";
 
 // Components
 import Counter from "./components/Counter/Counter.js";
-import CounterContext from "./components/CounterContext/CounterContext.js";
+import CounterWithUseReducer from "./components/Counter/CounterWithUseReducer.js";
 
 // Component
 class App extends Component {
@@ -21,16 +21,16 @@ class App extends Component {
         </article>
 
         <article>
-          <h1>useEffect hook</h1>
+          <h1>useReducer hook</h1>
           <section>
-            <Counter updateTitleAfterAddition={true} />
+            <CounterWithUseReducer />
           </section>
         </article>
 
         <article>
-          <h1>useState hook (context)</h1>
+          <h1>useEffect hook</h1>
           <section>
-            <CounterContext />
+            <Counter updateTitleAfterAddition={true} />
           </section>
         </article>
       </AppProvider>
