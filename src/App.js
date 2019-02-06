@@ -15,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <AppProvider>
+        <h1 className='title'>React Hooks</h1>
         <article>
           <h1>useState hook</h1>
           <section>
