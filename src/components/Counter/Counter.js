@@ -1,28 +1,25 @@
 // Libs
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // Styling
 import "./counter.scss";
 
-const updateDocumentTitle = count => {
-  if (count > 0) document.title = `The count is: ${count}`;
+// Code Example
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { light } from 'react-syntax-highlighter/dist/styles/prism';
 
-  // Same as componentWillUnmount
-  return () => {
-    document.title = "";
-  };
-};
+const codeExample = `
+// Libs
+import React, { useState } from "react";
+
+// Styling
+import "./counter.scss";
 
 // Component
-const Counter = ({ updateTitleAfterAddition }) => {
+const Counter = () => {
   // Destructure state and update method from useState hook
   // passed param is default value
   const [count, setCount] = useState(0);
-
-  if (updateTitleAfterAddition) {
-    // Replaces componentDidMount and componentDidUpdate
-    useEffect(() => updateDocumentTitle(count), [count]);
-  }
 
   return (
     <div className="counter">
@@ -31,6 +28,29 @@ const Counter = ({ updateTitleAfterAddition }) => {
         Count Up To The Moon
       </button>
     </div>
+  );
+};
+
+export default Counter;
+
+`
+
+// Component
+const Counter = () => {
+  // Destructure state and update method from useState hook
+  // passed param is default value
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <div className="counter">
+        <span className="counter__count">{count}</span>
+        <button className="counter__btn" onClick={() => setCount(count + 1)}>
+          Count Up To The Moon
+      </button>
+      </div>
+      <SyntaxHighlighter language='javascript' style={light}>{codeExample}</SyntaxHighlighter>
+    </>
   );
 };
 
