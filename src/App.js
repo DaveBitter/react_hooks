@@ -7,6 +7,7 @@ import AppProvider from "./static/AppProvider";
 // Components
 import Counter from "./components/Counter/Counter.js";
 import CounterWithUseEffect from "./components/Counter/CounterWithUseEffect.js";
+import CounterWithCustomHook from "./components/Counter/CounterWithCustomHook.js";
 import CounterWithUseContext from "./components/Counter/CounterWithUseContext.js";
 import CounterWithUseReducer from "./components/Counter/CounterWithUseReducer.js";
 
@@ -41,6 +42,13 @@ class App extends Component {
           <h1>useEffect hook</h1>
           <section>
             <CounterWithUseEffect />
+          </section>
+        </article>
+
+        <article>
+          <h1>use custom hook</h1>
+          <section>
+            <CounterWithCustomHook />
           </section>
         </article>
       </AppProvider>
