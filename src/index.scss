@@ -26,13 +26,16 @@ h1 {
   padding: 2em;
 
   > .title {
-    position: fixed;
-    transform: rotate(90deg) translateY(-1em);
-    transform-origin: top left;
-    top: 0;
-    left: 0;
-    font-size: calc(17.2vh);
     color: salmon;
+
+    @media (min-width: 1200px) {
+      position: fixed;
+      transform: rotate(90deg) translateY(-1em);
+      transform-origin: top left;
+      top: 0;
+      left: 0;
+      font-size: calc(17.2vh);
+    }
   }
 
   > article {
@@ -53,5 +56,7 @@ h1 {
 
   pre {
     margin-top: 4em !important;
+    max-width: 80vw;
+    overflow: auto;
   }
 }

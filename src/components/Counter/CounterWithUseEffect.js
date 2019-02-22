@@ -26,7 +26,7 @@ const updateDocumentTitle = count => {
 };
 
 // Component
-const Counter = ({ updateTitleAfterAddition }) => {
+const Counter = () => {
     // Destructure state and update method from useState hook
     // passed param is default value
     const [count, setCount] = useState(0);
@@ -59,7 +59,7 @@ const updateDocumentTitle = count => {
 };
 
 // Component
-const Counter = ({ updateTitleAfterAddition }) => {
+const Counter = () => {
     // Destructure state and update method from useState hook
     // passed param is default value
     const [count, setCount] = useState(0);
